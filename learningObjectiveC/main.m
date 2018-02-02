@@ -17,7 +17,8 @@ int main(int argc, const char * argv[])
         // insert code here...
         NSLog(@"Hello, World!");
         
-        // PRINTING FORMATS
+        //----------------------------------------------------------------------> PRINTING FORMATS <----------------------------------------------------------------------//
+        //
         /*
          %@ - id
          %d, %D, %i - long
@@ -42,6 +43,19 @@ int main(int argc, const char * argv[])
          
          */
         
+        //----------------------------------------------------------------------> NSObject <----------------------------------------------------------------------//
+        /*          NSObject
+                        ^
+                        |  Inherited from
+                    NSArray, NSString, etc
+                        ^
+                        |  Inherited from
+                    NSMutableArray
+         */
+        
+        // NSObject common methods
+        
+        
         // SENDING A MSG TO NIL
         // In other languages, this would cause a crash. But not in Objective C
         id setToNil;
@@ -51,7 +65,7 @@ int main(int argc, const char * argv[])
         // Even if willBeZero was a pointer, it would have been nil
         // Other types it may be unpredictable
         
-        // STRINGS
+        //----------------------------------------------------------------------> STRINGS <----------------------------------------------------------------------//
         
         // 1. C string <--> Objective C
         
@@ -63,8 +77,38 @@ int main(int argc, const char * argv[])
         // Create a C string from an NSString
         foo = [bar UTF8String];
         
-        //ARRAYS
+        // 2. Comparing strings
         
+        NSString *x = @"Nikita";
+        NSString *y = @"Nikita";
+        
+        // Comparing the pointers
+        if ( x== y)
+            NSLog(@"Pointers are the same");
+        else
+            NSLog(@"Pointers are different");
+        
+        if ([x isEqual:y])
+            NSLog(@"String values are the same");
+        else
+            NSLog(@"String values are different");
+        
+        // if x and y are instances of a class that has not overridden NSObject’s isEqual: method, the two expressions are equivalent.
+        
+        //----------------------------------------------------------------------> ARRAYS <----------------------------------------------------------------------//
+        // * List of pointers, cannot have nil in it
+        // * They cannot hold C primitive types - int, float
+        
+    
+        // 1. NSArray
+        // a. Immutable
+        // b.
+        // c.
+        
+        // 1. NSMutablearray
+        // a. Mutable
+        // b.
+        // c.
         NSMutableArray *array; // Just a pointer, no array exists yet
         array = [[NSMutableArray alloc] init]; // Here we have array creation and pointer now points to something meaningful
         int i;
@@ -80,9 +124,8 @@ int main(int argc, const char * argv[])
             NSNumber *numberToPrint = [array objectAtIndex:i];
             NSLog(@"The number at index %d is %@",  i, numberToPrint);
         }
-        
-        
-        
+    
+        //----------------------------------------------------------------------> CLASSES <----------------------------------------------------------------------//
     }
     return 0;
 }
