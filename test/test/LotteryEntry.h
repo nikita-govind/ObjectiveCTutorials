@@ -20,6 +20,7 @@
 @property () int firstNumber;
 @property () int secondNumber;
 
+- (id)initWithEntryDate:(NSDate*) date;
 - (void)prepareRandomNumbers;
 
 @end

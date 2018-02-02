@@ -9,6 +9,7 @@
 // Create Project -> Command line tool
 
 #import <Foundation/Foundation.h>
+#include "LotteryEntry.h"
 
 int main(int argc, const char * argv[])
 {
@@ -126,6 +127,65 @@ int main(int argc, const char * argv[])
         }
         
         //----------------------------------------------------------------------> CLASSES <----------------------------------------------------------------------//
+        NSDate *entryDate = [NSDate date];
+        
+        LotteryEntry *entry1 = [[LotteryEntry alloc] initWithEntryDate:entryDate];
+
+        [entry1 setFirstNumber:5];
+        [entry1 setSecondNumber:10];
+        [entry1 prepareRandomNumbers];
+        
+        NSLog(@"Entry date = %@, Number 1 = %i, Number 2 = %i", [entry1 entryDate], [entry1 firstNumber], [entry1 secondNumber]);
+        
+        NSMutableArray *mArray = [[NSMutableArray alloc] init];
+        [mArray addObject:entry1];
+        
+        // How messaging (ie calling a method) works?
+        /*
+         
+         isa:
+         - Objective C every object is basically a struct. isa pointer is a member of this struct.
+         - This pointer every object has and that points to its Class (of whom it is an instance)
+         - every class will also have an isa pointer that points to its superclass
+         - As most classes have NSObject as their superclass, every class object has an isa pointer which points to its class.
+         - The runtime follows this pointer to determine what class an object is, so it knows what selectors the object responds to, what its super class is, what properties the object has, and so on
+         
+         SEL:
+         - The methods of a class are indexed by the selector. The selector is of type SEL (char*)
+         [Table example below is asumming them to be ints)
+         
+         Example of when we send a message: [MyClassObject add1:anotherObject]
+         
+         |--------------|
+         |NSObject Class|                                     (4)If still not found and no more superclasses left, it throws
+         |--------------|                                     an EXCEPTION
+         |Method | SEL  |                                   ^
+         |--------------|                                   |
+         | add1 |   12  |                                   | (3) Follow MyClass's isa pointerFound the SEL 12.
+         | sub1 |   15  |                                   |   It points to its superclass NSObject Class
+         |--------------|                                   |   Search for the SEL 12. FOUND
+         
+                ^
+                |
+         
+         
+         |--------------|
+         |    MyClass   |
+         |--------------|
+         |Method | SEL  |
+         |--------------|                                   ^
+         | add2 |   22  |                                   |   (2) Translates to objc_msgSend(MyClassObject, 12, anotherObject);
+         | sub2 |   25  |                                   |   ie objc_msgSend looks at MyClassObject's isa pointer.
+         |--------------|                                   |   This isa pointer points to MyClass structure (variables, methods)
+                                                            |   Now it checks for the SEL 12 (char*)
+                ^                                           |   Not found. So proceed up to superclass and search again.
+                |
+        
+         MyClass Object                                     (1) [MyClassObject add1:anotherObject]
+         
+         
+         
+         */
     }
     return 0;
 }
