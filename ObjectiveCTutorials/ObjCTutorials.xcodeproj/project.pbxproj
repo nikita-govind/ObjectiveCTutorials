@@ -24,7 +24,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		41FD5A5E202511E500AA7F76 /* test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = test; sourceTree = BUILT_PRODUCTS_DIR; };
+		41FD5A5E202511E500AA7F76 /* ObjCTutorials */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ObjCTutorials; sourceTree = BUILT_PRODUCTS_DIR; };
 		41FD5A61202511E500AA7F76 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		41FD5A682025122D00AA7F76 /* LotteryEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LotteryEntry.m; sourceTree = "<group>"; };
 		41FD5A6A2025123300AA7F76 /* LotteryEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LotteryEntry.h; sourceTree = "<group>"; };
@@ -44,7 +44,7 @@
 		41FD5A55202511E500AA7F76 = {
 			isa = PBXGroup;
 			children = (
-				41FD5A60202511E500AA7F76 /* test */,
+				41FD5A60202511E500AA7F76 /* ObjCTutorials */,
 				41FD5A5F202511E500AA7F76 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,27 +52,27 @@
 		41FD5A5F202511E500AA7F76 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				41FD5A5E202511E500AA7F76 /* test */,
+				41FD5A5E202511E500AA7F76 /* ObjCTutorials */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		41FD5A60202511E500AA7F76 /* test */ = {
+		41FD5A60202511E500AA7F76 /* ObjCTutorials */ = {
 			isa = PBXGroup;
 			children = (
 				41FD5A6A2025123300AA7F76 /* LotteryEntry.h */,
 				41FD5A682025122D00AA7F76 /* LotteryEntry.m */,
 				41FD5A61202511E500AA7F76 /* main.m */,
 			);
-			path = test;
+			path = ObjCTutorials;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		41FD5A5D202511E500AA7F76 /* test */ = {
+		41FD5A5D202511E500AA7F76 /* ObjCTutorials */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 41FD5A65202511E500AA7F76 /* Build configuration list for PBXNativeTarget "test" */;
+			buildConfigurationList = 41FD5A65202511E500AA7F76 /* Build configuration list for PBXNativeTarget "ObjCTutorials" */;
 			buildPhases = (
 				41FD5A5A202511E500AA7F76 /* Sources */,
 				41FD5A5B202511E500AA7F76 /* Frameworks */,
@@ -82,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = test;
+			name = ObjCTutorials;
 			productName = test;
-			productReference = 41FD5A5E202511E500AA7F76 /* test */;
+			productReference = 41FD5A5E202511E500AA7F76 /* ObjCTutorials */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -101,7 +101,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 41FD5A59202511E500AA7F76 /* Build configuration list for PBXProject "test" */;
+			buildConfigurationList = 41FD5A59202511E500AA7F76 /* Build configuration list for PBXProject "ObjCTutorials" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -113,7 +113,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				41FD5A5D202511E500AA7F76 /* test */,
+				41FD5A5D202511E500AA7F76 /* ObjCTutorials */,
 			);
 		};
 /* End PBXProject section */
@@ -258,7 +258,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		41FD5A59202511E500AA7F76 /* Build configuration list for PBXProject "test" */ = {
+		41FD5A59202511E500AA7F76 /* Build configuration list for PBXProject "ObjCTutorials" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				41FD5A63202511E500AA7F76 /* Debug */,
@@ -267,7 +267,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		41FD5A65202511E500AA7F76 /* Build configuration list for PBXNativeTarget "test" */ = {
+		41FD5A65202511E500AA7F76 /* Build configuration list for PBXNativeTarget "ObjCTutorials" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				41FD5A66202511E500AA7F76 /* Debug */,
